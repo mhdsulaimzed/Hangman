@@ -31,4 +31,18 @@ def test_randoms_for_punctuation():
 
 
 
+def test_randoms_of_length_of_five():
+
+    fname = "/tmp/sample_words"
+    with open(fname, 'w') as f:
+        f.writelines( ["apples\n","pine\n","Bana\n"] )
+
+    for _ in range(100):
+
+
+        assert get_random_words(fname) == "apples"
+    os.unlink(fname)
+
+
+
 

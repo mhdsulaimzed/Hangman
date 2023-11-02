@@ -13,13 +13,16 @@ def get_random_words(wordfile="/usr/share/dict/words"):
             if not i.isalpha():
                 continue
 
+            if  len(i) <5:
+                continue
+
             
 
             
-            
-            goodwords.append(i)
+            else:
+                goodwords.append(i)
     return random.choice(goodwords)
-        
+    
 
 
 
