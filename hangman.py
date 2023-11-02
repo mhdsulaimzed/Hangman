@@ -22,18 +22,29 @@ def get_random_words(wordfile="/usr/share/dict/words"):
             else:
                 goodwords.append(i)
     return random.choice(goodwords)
+
+
+
+
+def masking_random_word():
+    w=get_random_words()
+    word_length=len(w)
+    return "_"*word_length
+
+    
+
     
 
 
 
 
+print(masking_random_word())
 
 
 
 
 
 
-print(get_random_words())
 
 
 if  __name__ == "__main__":
