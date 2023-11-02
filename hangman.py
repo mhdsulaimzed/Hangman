@@ -9,6 +9,12 @@ def get_random_words(wordfile="/usr/share/dict/words"):
         for i in words:
             if not i.islower():
                 continue
+
+            if not i.isalpha():
+                continue
+
+            
+
             
             
             goodwords.append(i)

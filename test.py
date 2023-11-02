@@ -21,13 +21,14 @@ def test_randoms_for_punctuation():
 
     fname = "/tmp/sample_words"
     with open(fname, 'w') as f:
-        f.writelines( ["Apple's\n","pIneapple\n","B#anana\n"] )
+        f.writelines( ["Apple's\n","pineapple\n","B#anana\n"] )
 
     for _ in range(100):
 
 
-        assert get_random_words(fname) == "pIneapple"
+        assert get_random_words(fname) == "pineapple"
     os.unlink(fname)
+
 
 
 
