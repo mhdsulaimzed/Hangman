@@ -6,15 +6,15 @@ import os
 
 
 def test_for_lowercase():
-    exfile = "/tmp/sample_words"
-    with open(exfile, 'w') as f:
-        f.writelines( ["Apple","apple","Banana"] )
+    fname = "/tmp/sample_words"
+    with open(fname, 'w') as f:
+        f.writelines( ["Apple\n","apple\n","Banana\n"] )
 
-    for i in exfile:
+    for _ in range(100):
 
 
-        assert get_random_words(exfile) == "apple"
-    os.unlink(sample_words)
+        assert get_random_words(fname) == "apple"
+    os.unlink(fname)
 
 
 
