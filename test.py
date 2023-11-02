@@ -45,7 +45,7 @@ def test_randoms_of_length_of_five():
 
 
 def test_for_mask_random_words():
-    assert masking_random_word("dimple") == "_____"
+    assert masking_random_word("dimple") == "______"
 
 
 

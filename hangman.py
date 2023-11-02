@@ -26,19 +26,24 @@ def get_random_words(wordfile="/usr/share/dict/words"):
 
 
 
-def masking_random_word():
-    w=get_random_words()
+def masking_random_word(w=get_random_words()):
+    
     word_length=len(w)
     return "_"*word_length
 
-    
-
-    
 
 
 
 
-print(masking_random_word())
+
+   
+
+print(masking_random_word()) 
+
+
+
+
+
 
 
 
