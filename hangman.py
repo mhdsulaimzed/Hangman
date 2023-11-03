@@ -34,12 +34,12 @@ def masking_random_word(r_w):
     return "_"*word_length
 
 
-r_w1="allan"
+
 def user_input():
     guessed_letter=[]
     for i in range(0,6):
         input_letter=input("enter a letter")
-        if input_letter in r_w1:
+        if input_letter in r_w:
 
 
 
