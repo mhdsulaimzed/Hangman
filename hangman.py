@@ -23,8 +23,13 @@ def get_random_words(wordfile="/usr/share/dict/words"):
                 goodwords.append(i)
     return random.choice(goodwords)
 
-def get_masked_word():
-    pass
+def get_masked_word(word,guesses):
+    
+    return len(word)*"-"
+
+
+    
+    
 
 
 
