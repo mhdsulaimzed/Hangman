@@ -1,4 +1,4 @@
-from hangman import get_random_words,get_masked_word
+from hangman import get_random_words,get_masked_word,get_status
 import os
 
 
@@ -76,3 +76,12 @@ def test_mask_word_single_guess_multiple_occurrence():
     word = "elephant"
     masked_word = get_masked_word(word, guesses)
     assert masked_word == "e-ep---t"
+
+def test_get_status():
+    word="sulaim"
+    turns_remaining=75
+    guesses = ["s","x"]
+
+    assert get_status(word,guesses,turns_remaining) == """Word:s-----
+           Turns remaining:75
+           Guessed so far:sx       """

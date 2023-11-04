@@ -38,6 +38,14 @@ def get_masked_word(secret_word,guesses):
    
     return "".join(masked_word)
 
+def get_status(secret_word,guesses,turns_remaining):
+    Word=get_masked_word(secret_word,guesses)
+    guesses_sofar="".join(guesses)
+    return f"""Word:{Word}   
+           Turns remaining:{turns_remaining}
+           Guessed so far:{guesses_sofar}      """
+    
+
     
     
 
