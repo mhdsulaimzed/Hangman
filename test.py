@@ -62,3 +62,9 @@ def test_mask_word_single_right_guess():
     word="elephant"
     guesses=['a']
     assert get_masked_word(word,guesses) == "-----a--"
+
+
+def test_mask_word_two_right_guess():
+    word="elephant"
+    guesses=["a","p"]
+    assert get_masked_word(word,guesses) == "---p-a--"
