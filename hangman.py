@@ -21,12 +21,14 @@ def get_random_words(wordfile="/usr/share/dict/words"):
             
             else:
                 goodwords.append(i)
-    return random.choice(goodwords)
-
-def get_masked_word(word,guesses):
     
-    return len(word)*"-"
+    secret_word=random.choice(goodwords)
+    return secret_word
 
+def get_masked_word(secret_word,guesses):
+    
+   
+    return len(secret_word)*"-"
 
     
     
