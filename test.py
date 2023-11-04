@@ -1,4 +1,4 @@
-from hangman import get_random_words,masking_random_word
+from hangman import get_random_words,get_masked_word
 import os
 
 
@@ -44,9 +44,11 @@ def test_randoms_of_length_of_five():
     os.unlink(fname)
 
 
-def test_for_mask_random_words():
-    assert masking_random_word("dimple") == "______"
+def test_random_words_not_reapeated():
+    words={get_random_words() for i in range(10)}
+    assert len(words) == 10
 
-
-
-
+def test_mask_word_no_gusses():
+    word="elephant"
+    guesses=[]
+    assert get_masked_word(word,guesses) == "--------"
