@@ -82,6 +82,5 @@ def test_get_status():
     turns_remaining=75
     guesses = ["s","x"]
 
-    assert get_status(word,guesses,turns_remaining) == """Word:s-----
-           Turns remaining:75
-           Guessed so far:sx       """
+    assert get_status(word,guesses,turns_remaining) == """Word:s----- \n Guesses so far:sx \n Turns remaining: 75  """
+           
