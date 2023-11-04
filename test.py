@@ -65,6 +65,14 @@ def test_mask_word_single_right_guess():
 
 
 def test_mask_word_two_right_guess():
+
     word="elephant"
     guesses=["a","p"]
     assert get_masked_word(word,guesses) == "---p-a--"
+
+
+def test_mask_word_single_guess_multiple_occurrence():
+    guesses = ['e', 'p','t']
+    word = "elephant"
+    masked_word = get_masked_word(word, guesses)
+    assert masked_word == "e-ep---t"
