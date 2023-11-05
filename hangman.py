@@ -44,11 +44,19 @@ def get_status(secret_word,guesses,turns_remaining):
     
     return f"""Word:{word} \n Guesses so far:{guesses_sofar} \n Turns remaining: {turns_remaining}  """
     
-    
+
+def play_game(secret_word,guesses,guess,turns_remaining):
+    if guess in secret_word:
+        guesses.append(guess)
+
+
+    return guesses,turns_remaining,next
+
+
+
 
     
     
-
 
 
 
