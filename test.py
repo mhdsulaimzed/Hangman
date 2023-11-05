@@ -97,4 +97,17 @@ def test_for_playgame_right_guess():
     assert turns_remining == 7
     action == next
 
+def test_for_playgame_wrong_guess_game_not_over():
+    word="shastri"
+    turns_remining=8
+    guesses=["x"]
+    guess="y"
+
+
+    guesses,turns_remining,action = play_game(word,guesses,guess,turns_remining)
+
+    assert guesses == ["x","y"]
+    assert turns_remining == 7
+    action == next
+
     
