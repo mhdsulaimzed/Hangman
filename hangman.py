@@ -49,17 +49,16 @@ def play_game(secret_word,guesses,guess,turns_remaining):
 
     
     
-    if guess in secret_word:
-        guesses.append(guess)
+    if guess in guesses:
+        
         return guesses,turns_remaining,"next"
-
+    guesses.append(guess)
     if "-" not in get_masked_word(secret_word,guesses):
-        guesses.append(guess)
+        
         return guesses,turns_remaining,"game_won"
 
     if not guess in secret_word:
         turns_remaining -= 1
-        guesses.append(guess)
 
         if turns_remaining == 0:
             return guesses,turns_remaining,"game_over"
@@ -73,7 +72,7 @@ def play_game(secret_word,guesses,guess,turns_remaining):
 
 
 
-
+ 
     
     
 
