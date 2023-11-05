@@ -108,6 +108,15 @@ def test_for_playgame_wrong_guess_game_not_over():
 
     assert guesses == ["x","y"]
     assert turns_remining == 7
-    action == next
+    assert action == next
 
-    
+def test_for_playgame_wrong_guess_game_over():
+    word="shastri"
+    turns_remaining=1
+    guesses=["q"]
+    guess="x"
+
+    guesses,turns_remaining,action = play_game(word,guesses,guess,turns_remaining)
+    assert guesses == ["q","x"]
+    assert turns_remaining == 0
+    assert action == "game_over"
