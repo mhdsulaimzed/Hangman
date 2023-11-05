@@ -49,6 +49,10 @@ def play_game(secret_word,guesses,guess,turns_remaining):
     if guess in secret_word:
         guesses.append(guess)
 
+    else:
+        turns_remaining -= 1
+        guesses.append(guess)
+
 
     return guesses,turns_remaining,next
 
