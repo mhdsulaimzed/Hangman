@@ -130,4 +130,14 @@ def test_for_play_game_win():
 
     
     assert action == "game_won"
+def test_for_repeated_guesses():
+    word = "sulaim"
+    turns_remaining=3
+    guesses=["s"]
+    guess="u"
 
+    guesses,turns_remaining,action = play_game(word,guesses,guess,turns_remaining)
+
+    assert guesses == ["s","u"]
+    assert turns_remaining == 3
+    assert action == "next"
