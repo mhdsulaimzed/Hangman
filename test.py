@@ -1,4 +1,4 @@
-from hangman import get_random_words,get_masked_word,get_status
+from hangman import get_random_words,get_masked_word,get_status,play_game
 import os
 
 
@@ -84,3 +84,17 @@ def test_get_status():
 
     assert get_status(word,guesses,turns_remaining) == """Word:s----- \n Guesses so far:sx \n Turns remaining: 75  """
            
+def test_for_playgame_right_guess():
+    word="shastri"
+    turns_remining=7
+    guesses=[]
+    guess="h"
+
+
+    guesses,turns_remining,action = play_game(word,guesses,guess,turns_remining)
+
+    assert guesses == ["h"]
+    assert turns_remining == 7
+    action == next
+
+    
