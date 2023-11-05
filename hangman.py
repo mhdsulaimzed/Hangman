@@ -46,8 +46,16 @@ def get_status(secret_word,guesses,turns_remaining):
     
 
 def play_game(secret_word,guesses,guess,turns_remaining):
+
+    
+    
     if guess in secret_word:
         guesses.append(guess)
+        return guesses,turns_remaining,"next"
+
+    if "-" not in get_masked_word(secret_word,guesses):
+        guesses.append(guess)
+        return guesses,turns_remaining,"game_won"
 
     if not guess in secret_word:
         turns_remaining -= 1
@@ -55,9 +63,13 @@ def play_game(secret_word,guesses,guess,turns_remaining):
 
         if turns_remaining == 0:
             return guesses,turns_remaining,"game_over"
+    
+    return guesses,turns_remaining,"next"
+
+        
 
 
-    return guesses,turns_remaining,next
+    
 
 
 

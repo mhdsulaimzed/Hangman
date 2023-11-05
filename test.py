@@ -95,7 +95,7 @@ def test_for_playgame_right_guess():
 
     assert guesses == ["h"]
     assert turns_remining == 7
-    action == next
+    action == "next"
 
 def test_for_playgame_wrong_guess_game_not_over():
     word="shastri"
@@ -108,7 +108,7 @@ def test_for_playgame_wrong_guess_game_not_over():
 
     assert guesses == ["x","y"]
     assert turns_remining == 7
-    assert action == next
+    assert action == "next"
 
 def test_for_playgame_wrong_guess_game_over():
     word="shastri"
@@ -120,3 +120,14 @@ def test_for_playgame_wrong_guess_game_over():
     assert guesses == ["q","x"]
     assert turns_remaining == 0
     assert action == "game_over"
+
+def test_for_play_game_win():
+    word = "shatri"
+    turns_remaining=2
+    guesses=["s","h","a","t","r"]
+    guess="i"
+    guesses,turns_remaining,action = play_game(word,guesses,guess,turns_remaining)
+
+    
+    assert action == "game_won"
+
