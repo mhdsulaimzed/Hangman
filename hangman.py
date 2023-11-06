@@ -70,113 +70,113 @@ def play_game(secret_word,guesses,guess,turns_remaining):
 
 
 
-# def main():
-#     guesses=[]
-#     turns_remaining=6
-#     stages = [ 
+def main():
+    guesses=[]
+    turns_remaining=6
+    stages = [ 
 
         
          
-#                 """
-#                    --------
-#                    |      |
-#                    |      O
-#                    |     \\|/
-#                    |      |
-#                    |     / \\
-#                    -
-#                 """,
+                """
+                   --------
+                   |      |
+                   |      O
+                   |     \\|/
+                   |      |
+                   |     / \\
+                   -
+                """,
                 
-#                 """
-#                    --------
-#                    |      |
-#                    |      O
-#                    |     \\|/
-#                    |      |
-#                    |     / 
-#                    -
-#                 """,
+                """
+                   --------
+                   |      |
+                   |      O
+                   |     \\|/
+                   |      |
+                   |     / 
+                   -
+                """,
                 
-#                 """
-#                    --------
-#                    |      |
-#                    |      O
-#                    |     \\|/
-#                    |      |
-#                    |      
-#                    -
-#                 """,
+                """
+                   --------
+                   |      |
+                   |      O
+                   |     \\|/
+                   |      |
+                   |      
+                   -
+                """,
                 
-#                 """
-#                    --------
-#                    |      |
-#                    |      O
-#                    |     \\|
-#                    |      |
-#                    |     
-#                    -
-#                 """,
+                """
+                   --------
+                   |      |
+                   |      O
+                   |     \\|
+                   |      |
+                   |     
+                   -
+                """,
                 
-#                 """
-#                    --------
-#                    |      |
-#                    |      O
-#                    |      |
-#                    |      |
-#                    |     
-#                    -
-#                 """,
+                """
+                   --------
+                   |      |
+                   |      O
+                   |      |
+                   |      |
+                   |     
+                   -
+                """,
                 
-#                 """
-#                    --------
-#                    |      |
-#                    |      O
-#                    |    
-#                    |      
-#                    |     
-#                    -
-#                 """,
+                """
+                   --------
+                   |      |
+                   |      O
+                   |    
+                   |      
+                   |     
+                   -
+                """,
                 
-#                 """
-#                    --------
-#                    |      |
-#                    |      
-#                    |    
-#                    |      
-#                    |     
-#                    -
-#                 """
-#     ]
+                """
+                   --------
+                   |      |
+                   |      
+                   |    
+                   |      
+                   |     
+                   -
+                """
+    ]
 
-#     print("WELCOME TO HANGMAN")
-#     print("---------------------------------------------------------------------------------------------------------- \n \n")
-#     seceret_word=get_random_words()
-#     print(seceret_word) 
+    print("WELCOME TO HANGMAN")
+    print("---------------------------------------------------------------------------------------------------------- \n \n")
+    seceret_word=get_random_words()
+    print(seceret_word) 
     
-#     while True:
-#         print(stages[turns_remaining])
+    while True:
+        print(stages[turns_remaining])
         
-#         status=get_status(seceret_word,guesses,turns_remaining)
-#         print(status)
-#         guess=input("Guess a letter")
+        status=get_status(seceret_word,guesses,turns_remaining)
+        print(status)
+        guess=input("Guess a letter")
 
-#         guesses,turns_remaining,action= play_game(seceret_word,guesses,guess,turns_remaining)
+        guesses,turns_remaining,action= play_game(seceret_word,guesses,guess,turns_remaining)
 
-#         if action == "game_over":
-#             print(f"OOps Gameover.... the word is {seceret_word}")
-#             print(stages[turns_remaining])
+        if action == "game_over":
+            print(f"OOps Gameover.... the word is {seceret_word}")
+            print(stages[turns_remaining])
 
-#             break
+            break
 
-#         if action == "game_won":
-#             print(f"Congrats.. you win. the word is {seceret_word}")
+        if action == "game_won":
+            print(f"Congrats.. you win. the word is {seceret_word}")
 
-#             next_round= input("For next word enter N/n  end to quit Q/q")
+            next_round= input("For next word enter N/n  end to quit Q/q")
 
-#             if next_round == "N" or next_round == "n":
-#                 main()
-#             if next_round == "q" or next_round == "Q":
-#                 break
+            if next_round == "N" or next_round == "n":
+                main()
+            if next_round == "q" or next_round == "Q":
+                break
 
 
 
